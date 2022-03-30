@@ -1,22 +1,15 @@
 import React, { useEffect, useState } from 'react';
+import useProducts from '../../../Hooks/useProducts';
 import {addToDb, getStoredCart} from '../../../utilities/fakedb'
 import Cart from '../../cart/Cart';
 import Product from '../Product/Product';
 import './Shop.css' 
    
 const Shop = () => {
-    const [products, setProducts] = useState([])
+    const [products, setProducts] = useProducts()
     const [cart, setCart] = useState([])
  
-    useEffect(()=> {
-        console.log("local storag first line")
-        fetch('products.json')
-        .then(res => res.json())
-        .then(data => {
-            setProducts(data)
-        })
-        
-    },[])
+ 
 
 useEffect(() => {
     const storedCart = getStoredCart()
