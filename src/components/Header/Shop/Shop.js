@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react'; 
 import useProducts from '../../../Hooks/useProducts';
 import {addToDb, getStoredCart} from '../../../utilities/fakedb'
 import Cart from '../../cart/Cart';
